@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* HSDG & Associates color theme (from brand image) */
+@theme {
+  /* Primary header – deep muted blue */
+  --color-header: #33415C;
+  /* Paragraph / sub-header / body – steel blue */
+  --color-paragraph: #5F7B9D;
+  /* Divider lines – light blue-grey */
+  --color-divider: #CCDDEE;
+  /* Background */
+  --color-background: #FFFFFF;
+}
+
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-paragraph);
+    background-color: var(--color-background);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-header);
+  }
+
+  p {
+    color: var(--color-paragraph);
+  }
+}
