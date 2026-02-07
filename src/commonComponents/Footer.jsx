@@ -98,10 +98,6 @@ const Footer = () => {
 								About Us
 							</a>
 						</div>
-						<p className="text-center md:text-right">
-							Copyright 2021 All Right Reserved By. Designed by webtel
-							electrosoft.
-						</p>
 					</div>
 				</div>
 			</div>
