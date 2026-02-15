@@ -34,7 +34,7 @@ const posts = [
 const Insights = () => {
 	return (
 		<section className="bg-white py-12">
-			<div className="mx-auto max-w-6xl px-4">
+			<div className="mx-auto max-w-7xl px-4">
 				<div className="text-center">
 					<h2 className="text-2xl font-semibold text-[color:var(--color-header)] sm:text-3xl">
 						Insights & Updates

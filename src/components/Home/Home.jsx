@@ -1,12 +1,12 @@
 import HeroSection from "./HeroSection";
 import Insights from "./Insights";
-import ServicesComp from "./ServicesComp";
+import ServicesCompHome from "./ServicesCompHome";
 
 const Home = () => {
     return (
         <>
             <HeroSection />
-            <ServicesComp />
+            <ServicesCompHome />
             <Insights />
         </>
     )

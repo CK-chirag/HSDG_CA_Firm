@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const services = [
 	{
-		title: 'Tax Planning & Filing',
+		title: 'Audit & Assurance Services',
 		description:
-			'Comprehensive tax planning strategies and accurate filing for individuals and businesses.',
-		points: ['Income Tax Returns', 'Tax Optimization', 'TDS Compliance', 'Advance Tax Planning'],
+			'The firm undertakes audit and assurance engagements with a structured, standards-driven approach, including:',
+		points: ['Statutory Audits under applicable statutes', 'Tax Audits under the Income-tax Act, 1961', 'Internal Audits', 'Concurrent Audits', 'Bank Audits', 'Stock and Revenue Audits', 'Due Diligence and Special Purpose Audits'],
 		icon: (
 			<svg
 				aria-hidden="true"
@@ -19,10 +21,10 @@ const services = [
 		),
 	},
 	{
-		title: 'Audit & Assurance',
+		title: ' Direct Taxation Services',
 		description:
-			'Professional audit services ensuring compliance and financial accuracy.',
-		points: ['Statutory Audit', 'Internal Audit', 'Tax Audit', 'Concurrent Audit'],
+			'The firm provides end-to-end direct tax compliance, advisory, and representation services, including:',
+		points: ['Preparation and filing of income-tax returns', 'Tax audit support and compliance', 'Computation and review of taxable income', 'Advisory on tax matters and positions', 'Handling of assessments, re-assessments, and appeals', 'Representation before income-tax authorities'],
 		icon: (
 			<svg
 				aria-hidden="true"
@@ -38,10 +40,10 @@ const services = [
 		),
 	},
 	{
-		title: 'Business Advisory',
+		title: 'Indirect Taxation (GST) Services',
 		description:
-			'Strategic business consulting to help your company grow and succeed.',
-		points: ['Financial Planning', 'Cash Flow Management', 'Investment Advisory', 'Business Valuation'],
+			'The firm’s indirect tax practice covers compliance, advisory, and review under the Goods and Services Tax laws, including:',
+		points: ['GST registration and amendments', 'Preparation and filing of GST returns', 'GST reconciliations and audits', 'Advisory on classification, valuation, and input tax credit', ' Handling of notices and departmental communications'],
 		icon: (
 			<svg
 				aria-hidden="true"
@@ -57,10 +59,10 @@ const services = [
 		),
 	},
 	{
-		title: 'GST Services',
+		title: 'Corporate & Secretarial Services',
 		description:
 			'Complete GST compliance and advisory services for seamless operations.',
-		points: ['GST Registration', 'Return Filing', 'GST Audit', 'Refund Processing'],
+		points: ['Incorporation of companies and LLPs', ' Ongoing corporate and secretarial compliances', 'Maintenance of statutory registers and records', ' Conduct of board and general meetings', 'Filing of statutory returns with ROC and other authorities', 'Secretarial compliance reviews and advisory'],
 		icon: (
 			<svg
 				aria-hidden="true"
@@ -73,87 +75,13 @@ const services = [
 				<path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" />
 			</svg>
 		),
-	},
-	{
-		title: 'Company Formation',
-		description: 'End-to-end company incorporation and compliance services.',
-		points: ['Private Limited Company', 'LLP Formation', 'Partnership Deed', 'ROC Compliance'],
-		icon: (
-			<svg
-				aria-hidden="true"
-				className="h-6 w-6"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="2"
-			>
-				<path d="M3 21h18" />
-				<path d="M5 21V7l7-4 7 4v14" />
-				<path d="M9 21v-6h6v6" />
-			</svg>
-		),
-	},
-	{
-		title: 'Payroll Management',
-		description: 'Complete payroll processing and statutory compliance services.',
-		points: ['Salary Processing', 'PF & ESI Compliance', 'TDS on Salary', 'Form 16 Generation'],
-		icon: (
-			<svg
-				aria-hidden="true"
-				className="h-6 w-6"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="2"
-			>
-				<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
-				<path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" />
-			</svg>
-		),
-	},
-	{
-		title: 'Financial Reporting',
-		description: 'Professional financial statement preparation and analysis.',
-		points: ['Financial Statements', 'Management Reporting', 'Ratio Analysis', 'Budgeting'],
-		icon: (
-			<svg
-				aria-hidden="true"
-				className="h-6 w-6"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="2"
-			>
-				<path d="M12 6v6l4 2" />
-				<circle cx="12" cy="12" r="9" />
-			</svg>
-		),
-	},
-	{
-		title: 'Accounting Services',
-		description: 'Complete bookkeeping and accounting solutions for your business.',
-		points: ['Books of Accounts', 'Bank Reconciliation', 'Inventory Management', 'MIS Reports'],
-		icon: (
-			<svg
-				aria-hidden="true"
-				className="h-6 w-6"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="2"
-			>
-				<path d="M4 19.5A2.5 2.5 0 006.5 22H20" />
-				<path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5z" />
-				<path d="M8 6h7M8 10h7M8 14h5" />
-			</svg>
-		),
-	},
+	}
 ]
 
-const ServicesComp = () => {
+const ServicesCompHome = () => {
 	return (
 		<section className="bg-white py-12">
-			<div className="mx-auto max-w-6xl px-4">
+			<div className="mx-auto max-w-7xl px-4">
 				<div className="text-center">
 					<h2 className="mt-2 text-2xl font-semibold text-[color:var(--color-header)] sm:text-3xl">
 						Our Professional Services
@@ -190,9 +118,18 @@ const ServicesComp = () => {
 						</article>
 					))}
 				</div>
+				<div className="mt-10 flex justify-center">
+					<Link
+						to="/services"
+						className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30"
+					>
+						View All Services
+					</Link>
+
+				</div>
 			</div>
 		</section>
 	)
 }
 
-export default ServicesComp
+export default ServicesCompHome

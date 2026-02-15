@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Assets } from '../../src/assets/assets'
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const toggleMenu = () => setIsMenuOpen((open) => !open)
+    const closeMenu = () => setIsMenuOpen(false)
+
     return (
         <header className="w-full">
             <div className="bg-[color:var(--color-header)] text-white">
-                <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-sm">
+                <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 text-sm">
                     <div className="flex flex-wrap items-center gap-4">
                         <a
                             className="flex items-center gap-2 transition-opacity hover:opacity-80"
@@ -25,7 +29,7 @@ const Header = () => {
                                     d="M2 5.5c0-.83.67-1.5 1.5-1.5h3.14c.7 0 1.32.44 1.54 1.1l1 3c.23.7-.05 1.46-.66 1.84l-1.7 1.06a14.1 14.1 0 006.22 6.22l1.06-1.7c.38-.61 1.14-.89 1.84-.66l3 1c.66.22 1.1.84 1.1 1.54V20.5c0 .83-.67 1.5-1.5 1.5h-1c-9.94 0-18-8.06-18-18v-1z"
                                 />
                             </svg>
-                            +91 98765 xxxxx
+                            +91 78388 34303
                         </a>
                         <a
                             className="flex items-center gap-2 transition-opacity hover:opacity-80"
@@ -50,7 +54,7 @@ const Header = () => {
                                     d="M4 7l8 6 8-6"
                                 />
                             </svg>
-                            info@hsdgassciations.com
+                            executive@hsdg.in
                         </a>
                     </div>
                     <span className="text-xs tracking-wide sm:text-sm">
@@ -60,11 +64,11 @@ const Header = () => {
             </div>
 
             <div className="border-b border-[color:var(--color-divider)] bg-white">
-                <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
+                <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-4">
                     <div className="flex items-center gap-3">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full text-white">
+                        <div className="flex h-6 w-8 items-center justify-center text-white">
                             <img
-                                src={Assets.logo}
+                                src="https://e7.pngegg.com/pngimages/112/579/png-clipart-institute-of-chartered-accountants-of-india-accounting-tax-logo-graphics-miscellaneous-blue.png"
                                 alt="HSDG & Associates"
                                 className="h-full w-auto rounded-3xl"
                             />
@@ -79,9 +83,12 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-6">
-                        <nav className="hidden items-center gap-6 text-sm font-medium text-[color:var(--color-header)] md:flex">
-                            <Link className="transition-colors hover:text-[color:var(--color-paragraph)]" to="/">
+                    <div className="flex items-center gap-2">
+                        <nav className="hidden items-center gap-5 text-sm font-medium text-[color:var(--color-header)] md:flex">
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/"
+                            >
                                 Home
                             </Link>
                             <Link
@@ -96,12 +103,86 @@ const Header = () => {
                             >
                                 About Us
                             </Link>
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/about-us"
+                            >
+                                Industries
+                            </Link>
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/about-us"
+                            >
+                                Foreign Desk
+                            </Link>
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/about-us"
+                            >
+                                Insights
+                            </Link>
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/careers"
+                            >
+                                Careers
+                            </Link>
+                            <Link
+                                className="transition-colors hover:text-[color:var(--color-paragraph)]"
+                                to="/contact-us"
+                            >
+                                Contact Us
+                            </Link>
                         </nav>
-                        <button className="rounded-full bg-[color:var(--color-header)] px-5 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90 cursor-pointer">
+                        <button
+                            className="ml-2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--color-divider)] text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30 md:hidden"
+                            type="button"
+                            aria-label="Toggle menu"
+                            aria-expanded={isMenuOpen}
+                            onClick={toggleMenu}
+                        >
+                            <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 6h18" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h18" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 18h18" />
+                            </svg>
+                        </button>
+                        <button className="ml-2 rounded-full bg-[color:var(--color-header)] px-5 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90 cursor-pointer">
                             Get Consultation
                         </button>
                     </div>
                 </div>
+
+                {isMenuOpen && (
+                    <div className="border-t border-[color:var(--color-divider)] bg-white md:hidden">
+                        <nav className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-4 text-sm font-medium text-[color:var(--color-header)]">
+                            <Link className="py-1" to="/" onClick={closeMenu}>
+                                Home
+                            </Link>
+                            <Link className="py-1" to="/services" onClick={closeMenu}>
+                                Services
+                            </Link>
+                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                                About Us
+                            </Link>
+                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                                Industries
+                            </Link>
+                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                                Foreign Desk
+                            </Link>
+                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                                Insights
+                            </Link>
+                            <Link className="py-1" to="/careers" onClick={closeMenu}>
+                                Careers
+                            </Link>
+                            <Link className="py-1" to="/contact-us" onClick={closeMenu}>
+                                Contact Us
+                            </Link>
+                        </nav>
+                    </div>
+                )}
             </div>
         </header>
     )

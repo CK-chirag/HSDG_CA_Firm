@@ -1,4 +1,4 @@
-import ServicesComp from "../Home/ServicesComp"
+import ServicesComp from "./ServicesComp"
 
 const Services = () => {
 	return (

@@ -3,7 +3,7 @@ import { Assets } from '../../assets/assets'
 const HeroSection = () => {
 	return (
 		<section className="bg-[color:var(--color-background)] py-14">
-			<div className="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
+			<div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-[1.05fr_0.95fr]">
 				<div>
 					<p className="text-sm font-semibold uppercase tracking-[0.25em] text-[color:var(--color-paragraph)]">
 						HSDG & Associates
@@ -60,7 +60,7 @@ const HeroSection = () => {
 								<path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7-7 7" />
 							</svg>
 						</a>
-						<button className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30">
+						<button className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30 cursor-pointer">
 							View Our Services
 						</button>
 					</div>
@@ -68,14 +68,15 @@ const HeroSection = () => {
 
 				<div className="relative">
 					<div className="rounded-3xl border border-[color:var(--color-divider)] bg-gradient-to-br from-[color:var(--color-divider)]/40 via-white to-white p-4 shadow-lg">
-						<div className="aspect-[4/3] w-full overflow-hidden rounded-3xl bg-[color:var(--color-header)]/10">
-							<div className="flex h-full items-center justify-center">
+						<div className="aspect-[4/3] w-full rounded-3xl bg-[color:var(--color-header)]/10">
+							<div className="aspect-[4/3] w-full overflow-hidden rounded-3xl bg-[color:var(--color-header)]/10">
 								<img
-									src={Assets.logo}
+									src="https://media.istockphoto.com/id/1827291486/photo/a-dedicated-mentor-is-explaining-mentees-importance-of-project-while-sitting-at-the-boardroom.jpg?s=612x612&w=0&k=20&c=whMTmOCyOUfNqoNBe8GPlmcNUM-aCfqD-0whdFPQpO4="
 									alt="HSDG & Associates"
-									className="h-full w-auto rounded-3xl"
+									className="h-full w-full object-cover"
 								/>
 							</div>
+
 						</div>
 					</div>
 					<div className="absolute -bottom-6 left-6 rounded-2xl border border-[color:var(--color-divider)] bg-white px-4 py-3 shadow-lg">

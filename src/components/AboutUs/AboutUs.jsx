@@ -1,13 +1,232 @@
 const AboutUs = () => {
+	const coreValues = [
+		{
+			title: 'Excellence',
+			description:
+				'Delivering exceptional service with unwavering commitment to quality and professional standards.',
+			icon: (
+				<svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 3l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1 3-6z" />
+				</svg>
+			),
+		},
+		{
+			title: 'Integrity',
+			description:
+				'Building trust through honest, transparent, and ethical practices in every engagement.',
+			icon: (
+				<svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" />
+				</svg>
+			),
+		},
+		{
+			title: 'Precision',
+			description:
+				'Attention to detail and accuracy in all aspects of financial and legal advisory.',
+			icon: (
+				<svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+					<circle cx="12" cy="12" r="9" />
+					<circle cx="12" cy="12" r="4" />
+					<circle cx="12" cy="12" r="1" />
+				</svg>
+			),
+		},
+		{
+			title: 'Growth',
+			description:
+				'Empowering clients to achieve sustainable growth and financial success.',
+			icon: (
+				<svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M4 16l6-6 4 4 6-6" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M14 8h6v6" />
+				</svg>
+			),
+		},
+	]
+
+	const practiceVerticals = [
+		{
+			title: 'Audit & Assurance',
+			text: 'Statutory, internal, and concurrent audits',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M6 18h12" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M10 14l-2 4" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M14 14l2 4" />
+					<circle cx="12" cy="9" r="4" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M9 9h6" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6" />
+				</svg>
+			),
+		},
+		{
+			title: 'Banking, Institutional',
+			text: 'PSUs, autonomous bodies, govt entities',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<rect x="3" y="9" width="18" height="10" rx="1" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M7 9V5h10v4" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M7 13h2" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M11 13h2" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M15 13h2" />
+				</svg>
+			),
+		},
+		{
+			title: 'Taxation & Regulatory',
+			text: 'Direct/indirect tax, representations',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M5 7h14" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M8 7v6a4 4 0 0 0 8 0V7" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M4 17h16" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 11v6" />
+				</svg>
+			),
+		},
+		{
+			title: 'Corporate & Legal',
+			text: 'Structuring, filings, due diligence',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<path strokeLinecap="round" strokeLinejoin="round" d="M5 20h14" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M7 20V8l5-3 5 3v12" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M9 15h6" />
+				</svg>
+			),
+		},
+		{
+			title: 'Forensic & Special Audit',
+			text: 'Investigation, fact-finding, review',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<circle cx="11" cy="11" r="6" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M16 16l4 4" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M11 8v6" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M8 11h6" />
+				</svg>
+			),
+		},
+		{
+			title: 'International & Cross Border',
+			text: 'India entry, compliance outsourcing',
+			icon: (
+				<svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+					<circle cx="12" cy="12" r="9" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M3 12h18" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 3a14 14 0 0 1 0 18" />
+					<path strokeLinecap="round" strokeLinejoin="round" d="M12 3a14 14 0 0 0 0 18" />
+				</svg>
+			),
+		},
+	]
+
+	const teamMembers = [
+		{
+			name: 'CA Harvinder Singh',
+			role: 'Founder and Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'Manager - Audit',
+			role: 'Compliance & Review',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Versha',
+			role: 'Senior Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Jasmeet Kaur',
+			role: 'Senior Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Ankit Choudhary',
+			role: 'Senior Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Sanjay',
+			role: 'Senior Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Vasim Khan',
+			role: 'Associate Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'CA Uzma',
+			role: 'Associate Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+		{
+			name: 'Advocate Chandni Dugar',
+			role: 'Associate Partner',
+			image:
+				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+		},
+	]
+
 	return (
 		<section className="bg-white">
+			<div
+				className="relative min-h-[320px] overflow-hidden bg-[color:var(--color-header)] text-white sm:min-h-[380px]"
+				style={{
+					backgroundImage:
+						"url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')",
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+				}}
+			>
+				<div className="absolute inset-0 bg-gradient-to-r from-[color:var(--color-header)]/95 via-[color:var(--color-header)]/80 to-transparent" />
+				<div className="relative mx-auto flex h-full max-w-6xl items-center px-4 py-16">
+					<div className="max-w-2xl">
+						<p className="text-3xl font-semibold uppercase tracking-[0.25em] text-white/80">
+							HSDG & Associates
+						</p>
+						<div className="mt-3 h-0.5 w-16 rounded-full bg-[color:var(--color-divider)]" />
+						<h1 className="mt-5 mb-10 text-2xl font-semibold sm:text-xl text-white/80">
+							Governance & Risk Framework
+						</h1>
+						<ul className="mt-5 space-y-2 text-sm text-white/85">
+							<li className="flex items-start gap-2">
+								<span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/80" />
+								<span>Effective Oversight</span>
+							</li>
+							<li className="flex items-start gap-2">
+								<span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/80" />
+								<span>Ethical Conduct</span>
+							</li>
+							<li className="flex items-start gap-2">
+								<span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/80" />
+								<span>Responsible Decision-Making</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
 			<div className="mx-auto max-w-6xl px-4 py-16">
 				<div className="text-center">
 					<h1 className="text-3xl font-semibold text-[color:var(--color-header)] sm:text-4xl">
-						About H S D G & Associates
+						About HSDG & Associates
 					</h1>
 					<p className="mx-auto mt-4 max-w-3xl text-sm text-[color:var(--color-paragraph)]">
-						Established in 2021, H S D G & Associates is a multidisciplinary professional firm
+						Established in 2021, HSDG & Associates is a multidisciplinary professional firm
 						structured to deliver integrated audit, regulatory, and advisory services through
 						a partner-led engagement model.
 					</p>
@@ -25,7 +244,7 @@ const AboutUs = () => {
 							institution-driven environments.
 						</p>
 						<p>
-							With presence across five cities and a professional team of 25+ members, H S D G &
+							With presence across five cities and a professional team of 25+ members, HSDG &
 							Associates is equipped to handle assignments requiring scale, consistency, and
 							strict adherence to statutory and regulatory frameworks. The firm is oriented
 							towards serving institutions, banks, government bodies, corporates, not-for-profit
@@ -54,7 +273,7 @@ const AboutUs = () => {
 								<p className="text-xs text-[color:var(--color-paragraph)]">Professionals</p>
 							</div>
 							<div className="rounded-2xl bg-white p-4 shadow-sm">
-								<p className="text-2xl font-semibold text-[color:var(--color-header)]">5</p>
+								<p className="text-2xl font-semibold text-[color:var(--color-header)]">7</p>
 								<p className="text-xs text-[color:var(--color-paragraph)]">City Presence</p>
 							</div>
 							<div className="rounded-2xl bg-white p-4 shadow-sm">
@@ -68,13 +287,45 @@ const AboutUs = () => {
 				</div>
 			</div>
 
+			<div className="bg-white py-14">
+				<div className="mx-auto max-w-6xl px-4">
+					<div className="text-center">
+						<p className="text-xs font-semibold uppercase tracking-[0.3em] text-[color:var(--color-header)]">
+							Our Principles
+						</p>
+						<h2 className="mt-3 text-2xl font-semibold text-[color:var(--color-header)] sm:text-3xl">
+							Core Values
+						</h2>
+						<div className="mx-auto mt-4 h-0.5 w-16 rounded-full bg-[color:var(--color-header)]/70" />
+					</div>
+					<div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+						{coreValues.map((value) => (
+							<div
+								key={value.title}
+								className="rounded-2xl border border-[color:var(--color-divider)] bg-white p-6 text-center shadow-sm"
+							>
+								<div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--color-header)] text-white">
+									{value.icon}
+								</div>
+								<h3 className="mt-5 text-base font-semibold text-[color:var(--color-header)]">
+									{value.title}
+								</h3>
+								<p className="mt-3 text-sm text-[color:var(--color-paragraph)]">
+									{value.description}
+								</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+
 			<div className="bg-[color:var(--color-divider)]/20 py-14">
 				<div className="mx-auto max-w-6xl px-4">
 					<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
 						Our Operating Model
 					</h2>
 					<p className="mt-4 max-w-4xl text-sm text-[color:var(--color-paragraph)]">
-						H S D G & Associates follows a partner-led engagement model, under which senior
+						HSDG & Associates follows a partner-led engagement model, under which senior
 						partners retain direct responsibility for engagement planning, execution oversight,
 						and final deliverables. Each assignment is structured through a multidisciplinary
 						team framework, drawing upon expertise from Chartered Accountants, the Company
@@ -98,90 +349,67 @@ const AboutUs = () => {
 				</div>
 			</div>
 
-			<div className="mx-auto max-w-6xl px-4 py-16">
-				<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
-					Governance & Risk Framework
-				</h2>
-				<p className="mt-4 text-sm text-[color:var(--color-paragraph)]">
-					The firm maintains a governance and risk framework designed to ensure effective
-					overview, ethical conduct, and responsible decision-making at the firm level. The
-					partner-based governance structure ensures decisions on professional conduct,
-					risk acceptance, independence, and quality oversight are subject to senior-level
-					judgment and accountability.
-				</p>
-				<div className="mt-6 grid gap-4 md:grid-cols-2">
-					{[
-						'Engagement acceptance guided by independence, conflict evaluation, regulatory sensitivity, and reputational risk assessment.',
-						'Firm-wide risk oversight to monitor professional, regulatory, and reputational risks with partner-level attention for heightened matters.',
-						'Strong emphasis on ethical standards, confidentiality, and data protection to preserve objectivity and client trust.',
-						'Controls aligned with statutory and regulatory requirements to uphold professional discipline in institutional engagements.',
-					].map((item) => (
-						<div
-							key={item}
-							className="rounded-2xl border border-[color:var(--color-divider)] bg-white p-4 text-sm text-[color:var(--color-paragraph)]"
-						>
-							{item}
-						</div>
-					))}
-				</div>
-			</div>
-
 			<div className="bg-white py-14">
 				<div className="mx-auto max-w-6xl px-4">
-					<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
-						Practice Verticals
-					</h2>
-					<p className="mt-3 text-sm text-[color:var(--color-paragraph)]">
-						We deliver services through defined practice verticals, each structured to address
-						the requirements of regulated entities, institutions, corporates, and government
-						bodies.
-					</p>
-					<div className="mt-8 grid gap-6 md:grid-cols-2">
-						{[
-							{
-								title: 'Audit & Assurance',
-								text:
-									'Focused on statutory, internal and concurrent audits, bank branch audits, and assurance assignments with emphasis on audit quality and compliance.',
-							},
-							{
-								title: 'Banking, Institutional & Government Assignments',
-								text:
-									'Assignments for banks, PSUs, autonomous bodies, societies, and government-funded entities with structured reporting and guideline compliance.',
-							},
-							{
-								title: 'Taxation & Regulatory Advisory',
-								text:
-									'Direct and indirect tax compliance, advisory support, representation, and regulatory interpretation in compliance-driven environments.',
-							},
-							{
-								title: 'Corporate Law, Secretarial & Legal Support',
-								text:
-									'Corporate structuring, secretarial compliance, regulatory filings, due diligence, and documentation with integrated legal input.',
-							},
-							{
-								title: 'Forensic, Special Audit & Investigation Support',
-								text:
-									'Forensic reviews, special audits, fact-finding, and investigation engagements with analytical depth and regulatory alignment.',
-							},
-							{
-								title: 'International & Cross-Border Advisory',
-								text:
-									'India entry support, compliance outsourcing, regulatory advisory, and coordination for overseas entities and cross-border engagements.',
-							},
-						].map((item) => (
-							<div
-								key={item.title}
-								className="rounded-2xl border border-[color:var(--color-divider)] bg-white p-5 shadow-sm"
-							>
-								<h3 className="text-base font-semibold text-[color:var(--color-header)]">
-									{item.title}
-								</h3>
-								<p className="mt-2 text-sm text-[color:var(--color-paragraph)]">
-									{item.text}
+					<div className="text-center">
+						<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
+							Our Team
+						</h2>
+						<p className="mx-auto mt-3 max-w-2xl text-sm text-[color:var(--color-paragraph)]">
+							A focused leadership and advisory team delivering reliable, partner-led execution.
+						</p>
+					</div>
+					<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+						{teamMembers.map((member) => (
+							<div key={member.name} className="text-center">
+								<div className="overflow-hidden rounded-md border border-[color:var(--color-divider)] bg-[color:var(--color-divider)]/20">
+									<img
+										src={member.image}
+										alt={member.name}
+										className="h-44 w-full object-cover"
+										loading="lazy"
+									/>
+								</div>
+								<p className="mt-3 text-sm font-semibold text-[color:var(--color-header)]">
+									{member.name}
 								</p>
+								<p className="text-xs text-[color:var(--color-paragraph)]">{member.role}</p>
 							</div>
 						))}
 					</div>
+				</div>
+			</div>
+
+			<div className="mx-auto max-w-6xl px-4 py-16">
+				<div className="text-center">
+					<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
+						Practice Verticals
+					</h2>
+					<p className="mx-auto mt-3 max-w-3xl text-sm text-[color:var(--color-paragraph)]">
+						Our core service areas are organized into specialized practice verticals with
+						focused expertise and disciplined execution.
+					</p>
+				</div>
+				<div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+					{practiceVerticals.map((item, index) => (
+						<div
+							key={item.title}
+							className={`rounded-none border border-[color:var(--color-divider)] bg-[color:var(--color-header)] text-white shadow-sm ${index % 2 === 0
+									? 'bg-[color:var(--color-header)]'
+									: 'bg-[color:var(--color-header)]/85'
+								}`}
+						>
+							<div className="flex h-full flex-col items-center justify-center px-5 py-8 text-center">
+								<div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/30">
+									{item.icon}
+								</div>
+								<h3 className="text-sm font-semibold uppercase tracking-wide text-white">
+									{item.title}
+								</h3>
+								<p className="mt-2 text-xs text-white/80">{item.text}</p>
+							</div>
+						</div>
+					))}
 				</div>
 			</div>
 
@@ -211,47 +439,6 @@ const AboutUs = () => {
 							</div>
 						))}
 					</div>
-				</div>
-			</div>
-
-			<div className="mx-auto max-w-6xl px-4 py-16">
-				<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
-					Quality Standards & Professional Discipline
-				</h2>
-				<p className="mt-4 text-sm text-[color:var(--color-paragraph)]">
-					We follow established professional standards across auditing, assurance, taxation,
-					and corporate compliance frameworks. Quality is supported through partner-level
-					supervision and review, ensuring significant professional judgments are subject to
-					appropriate oversight. The firm promotes continuous learning, knowledge sharing,
-					and ethical conduct with strong focus on independence, confidentiality, and
-					professional responsibility.
-				</p>
-				<div className="mt-6 rounded-3xl border border-[color:var(--color-divider)] bg-white p-6 text-sm text-[color:var(--color-paragraph)]">
-					Through this disciplined approach, we deliver reliable, well-reasoned, and
-					defensible professional outputs in environments requiring high levels of
-					compliance, governance, and accountability.
-				</div>
-			</div>
-
-			<div className="bg-[color:var(--color-divider)]/20 py-14">
-				<div className="mx-auto max-w-6xl px-4">
-					<h2 className="text-2xl font-semibold text-[color:var(--color-header)]">
-						Future Outlook & Growth Orientation
-					</h2>
-					<p className="mt-4 text-sm text-[color:var(--color-paragraph)]">
-						H S D G & Associates is focused on building a sustainable and scalable
-						professional practice, guided by quality, delivery consistency, and
-						multidisciplinary capability. Our growth orientation is centred on deepening core
-						practices, strengthening execution capabilities, and enhancing client outcomes
-						across audit, regulatory, and advisory engagements.
-					</p>
-					<p className="mt-3 text-sm text-[color:var(--color-paragraph)]">
-						We aim to refine processes, adopt technology, and invest in continuous
-						professional development while maintaining partner involvement and technical
-						rigour. The firm also recognises the growing relevance of cross-border
-						considerations and integrated advisory requirements, and seeks to develop
-						capabilities through structured collaboration and disciplined execution.
-					</p>
 				</div>
 			</div>
 		</section>

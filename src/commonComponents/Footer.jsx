@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
 		<footer className="bg-[color:var(--color-header)] text-white">
-			<div className="mx-auto max-w-6xl px-4 py-12">
+			<div className="mx-auto max-w-7xl px-4 py-12">
 				<div className="grid gap-8 md:grid-cols-3">
 					<div>
 						<h3 className="text-white text-lg font-semibold tracking-wide">ADDRESS</h3>
@@ -24,8 +24,8 @@ const Footer = () => {
 								</svg>
 							</div>
 							<p className="text-sm leading-relaxed text-white/80">
-								B-162, 2nd Floor, Left Side, Greenfield Colony, Faridabad –
-								121010, Haryana India
+								D-194, First Floor, Okhla Phase I, 
+								<br />New Delhi - 110020
 							</p>
 						</div>
 					</div>
@@ -50,7 +50,7 @@ const Footer = () => {
 								</svg>
 							</div>
 							<div className="text-sm leading-relaxed text-white/80">
-								<p className="font-medium text-white">+91-98189 xxxxx</p>
+								<p className="font-medium text-white">+91 78388 34303</p>
 								<p>We feel happy to talk</p>
 							</div>
 						</div>
@@ -81,7 +81,7 @@ const Footer = () => {
 								</svg>
 							</div>
 							<div className="text-sm leading-relaxed text-white/80">
-								<p className="font-medium text-white">admin@hsdgassciations.com</p>
+								<p className="font-medium text-white">executive@hsdg.in</p>
 								<p>Write Your Message</p>
 							</div>
 						</div>
@@ -96,6 +96,9 @@ const Footer = () => {
 							</a>
 							<a className="transition-opacity hover:opacity-80" href="/about-us">
 								About Us
+							</a>
+							<a className="transition-opacity hover:opacity-80" href="/about-us">
+								Contact Us
 							</a>
 						</div>
 					</div>
