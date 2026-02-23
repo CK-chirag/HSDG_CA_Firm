@@ -147,9 +147,12 @@ const Header = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 18h18" />
                             </svg>
                         </button>
-                        <button className="ml-2 rounded-full bg-[color:var(--color-header)] px-5 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90 cursor-pointer">
-                            Get Consultation
-                        </button>
+                        <a
+							href="https://wa.me/917838834303"
+							className="inline-flex items-center gap-2 ml-2 rounded-full bg-[color:var(--color-header)] px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+						>
+							Get Consultation
+						</a>
                     </div>
                 </div>
 
