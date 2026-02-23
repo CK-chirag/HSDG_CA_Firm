@@ -1,35 +1,7 @@
-const posts = [
-	{
-		tag: 'GST',
-		title: 'GST Compliance Checklist for Small Businesses',
-		description:
-			'A comprehensive guide to ensure your small business stays compliant with GST regulations.',
-		author: 'CA Priya Sharma',
-		date: 'January 10, 2024',
-		image:
-			'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80',
-	},
-	{
-		tag: 'Technology',
-		title: 'Digital Transformation in Accounting',
-		description:
-			'How modern accounting firms are leveraging technology to provide better services to clients.',
-		author: 'CA Rajesh Kumar',
-		date: 'January 5, 2024',
-		image:
-			'https://images.unsplash.com/photo-1474898856510-884a2c0be546?auto=format&fit=crop&w=900&q=80',
-	},
-	{
-		tag: 'Compliance',
-		title: 'Annual Compliance Calendar 2024',
-		description:
-			'Important dates and deadlines every business owner should know for the financial year 2024.',
-		author: 'CA Harish Choudhary',
-		date: 'December 28, 2023',
-		image:
-			'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80',
-	},
-]
+import { Link } from 'react-router-dom'
+import { insightsPosts } from '../Insights/insightsData'
+
+const handleScrollTop = () => window.scrollTo(0, 0)
 
 const Insights = () => {
 	return (
@@ -46,7 +18,7 @@ const Insights = () => {
 				</div>
 
 				<div className="mt-10 grid gap-6 lg:grid-cols-3">
-					{posts.map((post, index) => (
+					{insightsPosts.slice(0, 3).map((post) => (
 						<article
 							key={post.title}
 							className="overflow-hidden rounded-2xl border border-[color:var(--color-divider)] bg-white"
@@ -62,7 +34,12 @@ const Insights = () => {
 									{post.tag}
 								</span>
 								<h3 className="mt-4 text-base font-semibold text-[color:var(--color-header)]">
-									{post.title}
+									<Link
+										to={`/insights/${post.slug}`}
+										className="transition hover:text-[color:var(--color-accent)]"
+									>
+										{post.title}
+									</Link>
 								</h3>
 								<p className="mt-3 text-sm text-[color:var(--color-paragraph)]">
 									{post.description}
@@ -97,13 +74,27 @@ const Insights = () => {
 										{post.date}
 									</span>
 								</div>
-								<button className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-[color:var(--color-header)]">
+								<Link
+									to={`/insights/${post.slug}`}
+									onClick={handleScrollTop}
+									className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-[color:var(--color-header)]"
+								>
 									Read More
 									<span aria-hidden="true">→</span>
-								</button>
+								</Link>
 							</div>
 						</article>
 					))}
+				</div>
+
+				<div className="mt-10 flex justify-center">
+					<Link
+						to="/insights"
+						onClick={handleScrollTop}
+						className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30"
+					>
+						View All Insights
+					</Link>
 				</div>
 			</div>
 		</section>

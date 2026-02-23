@@ -105,19 +105,19 @@ const Header = () => {
                             </Link>
                             <Link
                                 className="transition-colors hover:text-[color:var(--color-paragraph)]"
-                                to="/about-us"
+                                to="/industries"
                             >
                                 Industries
                             </Link>
                             <Link
                                 className="transition-colors hover:text-[color:var(--color-paragraph)]"
-                                to="/about-us"
+                                to="/foreign"
                             >
                                 Foreign Desk
                             </Link>
                             <Link
                                 className="transition-colors hover:text-[color:var(--color-paragraph)]"
-                                to="/about-us"
+                                to="/insights"
                             >
                                 Insights
                             </Link>
@@ -165,13 +165,13 @@ const Header = () => {
                             <Link className="py-1" to="/about-us" onClick={closeMenu}>
                                 About Us
                             </Link>
-                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                            <Link className="py-1" to="/industries" onClick={closeMenu}>
                                 Industries
                             </Link>
-                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                            <Link className="py-1" to="/foreign" onClick={closeMenu}>
                                 Foreign Desk
                             </Link>
-                            <Link className="py-1" to="/about-us" onClick={closeMenu}>
+                            <Link className="py-1" to="/insights" onClick={closeMenu}>
                                 Insights
                             </Link>
                             <Link className="py-1" to="/careers" onClick={closeMenu}>

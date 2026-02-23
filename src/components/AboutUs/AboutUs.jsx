@@ -1,3 +1,5 @@
+import { Assets } from "../../assets/assets";
+
 const AboutUs = () => {
 	const coreValues = [
 		{
@@ -126,58 +128,58 @@ const AboutUs = () => {
 
 	const teamMembers = [
 		{
+			name: 'CA Deepak Gupta',
+			role: 'Managing Partner',
+			image:
+				Assets.pic8,
+		},
+		{
 			name: 'CA Harvinder Singh',
 			role: 'Founder and Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
-		},
-		{
-			name: 'Manager - Audit',
-			role: 'Compliance & Review',
-			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
-		},
-		{
-			name: 'CA Versha',
-			role: 'Senior Partner',
-			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic9,
 		},
 		{
 			name: 'CA Jasmeet Kaur',
 			role: 'Senior Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic7,
+		},
+		{
+			name: 'CA Versha',
+			role: 'Senior Partner',
+			image:
+				Assets.pic6,
 		},
 		{
 			name: 'CA Ankit Choudhary',
 			role: 'Senior Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic5,
 		},
 		{
 			name: 'CA Sanjay',
 			role: 'Senior Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic4,
 		},
 		{
 			name: 'CA Vasim Khan',
 			role: 'Associate Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic3,
 		},
 		{
 			name: 'CA Uzma',
 			role: 'Associate Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic2
 		},
 		{
 			name: 'Advocate Chandni Dugar',
 			role: 'Associate Partner',
 			image:
-				'https://media.istockphoto.com/id/876693964/vector/isolated-business-icon.jpg?s=612x612&w=0&k=20&c=jbq-exr0mvybunB0N1hGFQJo2Z7xGheWoZY7oC1KkxA=',
+				Assets.pic1,
 		},
 	]
 
@@ -362,11 +364,11 @@ const AboutUs = () => {
 					<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 						{teamMembers.map((member) => (
 							<div key={member.name} className="text-center">
-								<div className="overflow-hidden rounded-md border border-[color:var(--color-divider)] bg-[color:var(--color-divider)]/20">
+								<div className="overflow-hidden rounded-md border border-[color:var(--color-divider)] bg-white">
 									<img
 										src={member.image}
 										alt={member.name}
-										className="h-44 w-full object-cover"
+										className="h-44 w-full object-contain"
 										loading="lazy"
 									/>
 								</div>

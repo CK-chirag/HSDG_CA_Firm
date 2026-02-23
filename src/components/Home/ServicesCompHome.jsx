@@ -121,6 +121,7 @@ const ServicesCompHome = () => {
 				<div className="mt-10 flex justify-center">
 					<Link
 						to="/services"
+						onClick={() => window.scrollTo(0,0)}
 						className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30"
 					>
 						View All Services

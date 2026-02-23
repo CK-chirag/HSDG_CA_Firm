@@ -7,6 +7,11 @@ import Services from './components/Services/Services'
 import AboutUs from './components/AboutUs/AboutUs'
 import Careers from './components/Careers/Careers'
 import ContactUs from './components/ContactUs/ContactUs'
+import InsightsPage from './components/Insights/InsightsPage'
+import InsightDetail from './components/Insights/InsightDetail'
+import IndustriesPage from './components/Industries/IndustriesPage'
+import IndustryDetail from './components/Industries/IndustryDetail'
+import ForeignDesk from './components/ForeignDesk/ForeignDesk'
 
 function App() {
   return (
@@ -15,6 +20,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/insights/:slug" element={<InsightDetail />} />
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/industries/:slug" element={<IndustryDetail />} />
+          <Route path="/foreign" element={<ForeignDesk />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/careers" element={<Careers />} />

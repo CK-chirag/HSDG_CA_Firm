@@ -1,4 +1,5 @@
 import { Assets } from '../../assets/assets'
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
 	return (
@@ -44,7 +45,7 @@ const HeroSection = () => {
 
 					<div className="mt-8 flex flex-wrap items-center gap-4">
 						<a
-							href="https://wa.me/919999988888"
+							href="https://wa.me/917838834303"
 							className="inline-flex items-center gap-2 rounded-full bg-[color:var(--color-header)] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
 						>
 							Get Consultation
@@ -60,9 +61,13 @@ const HeroSection = () => {
 								<path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7-7 7" />
 							</svg>
 						</a>
-						<button className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30 cursor-pointer">
+						<Link
+							to="/services"
+							onClick={() => window.scrollTo(0,0)}
+							className="rounded-full border border-[color:var(--color-divider)] px-6 py-3 text-sm font-semibold text-[color:var(--color-header)] transition-colors hover:bg-[color:var(--color-divider)]/30"
+						>
 							View Our Services
-						</button>
+						</Link>
 					</div>
 				</div>
 
